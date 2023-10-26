@@ -17,7 +17,7 @@ const PopularJobCard = ({item, selectedJob, handleCardPress}) => {
         // the following is meant to use the checkIURL function to put a default image one things that don't
         // have a logo but for now it just puts a logo on the wrong jobs so it's something to fix later
         // checkImageURL(item?.employer_logo) ? item.employer_logo : "https://t4.ftcdn.net/jpg/05/05/61/73/360_F_505617309_NN1CW7diNmGXJfMicpY9eXHKV4sqzO5H.jpg",
-          source = {{uri: item.employer_logo}}
+          source = {{uri: checkImageURL(item?.employer_logo) ? item.employer_logo : "https://t4.ftcdn.net/jpg/05/05/61/73/360_F_505617309_NN1CW7diNmGXJfMicpY9eXHKV4sqzO5H.jpg"}}
           resizeMode = "contain"
           style = {styles.logoImage}
         />
