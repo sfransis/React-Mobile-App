@@ -7,7 +7,7 @@ import {COLORS, SIZES} from '../../../constants'
 import PopularJobCard from '../../common/cards/popular/PopularJobCard'
 import useFetch from '../../../hook/useFetch';
 
-const Popularjobs = () => {
+const Popularjobs = ({handleClick}) => {
 
   const router = useRouter();
   const {data, isLoading, error} = useFetch('search', {query: 'React developer', page: 1, num_pages: 1})
@@ -22,7 +22,7 @@ const Popularjobs = () => {
     <View style = {styles.container}>
       <View style = {styles.header}>
         <Text style = {styles.headerTitle}> Popular Jobs </Text>
-        <TouchableOpacity>
+        <TouchableOpacity onPress = {handleClick}>
           <Text style = {styles.headerBtn}> Show All</Text>
         </TouchableOpacity>
       </View>

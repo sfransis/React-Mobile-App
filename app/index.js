@@ -44,8 +44,20 @@ const Home = () => {
                             }
                         }}
                     />
-                    <Popularjobs/>
-                    <Nearbyjobs/>
+                    <Popularjobs
+                        handleClick = {() => {
+                            if (searchTerm) {
+                                router.push(`/search/Popular Jobs`)
+                            }
+                        }}
+                    />
+                    <Nearbyjobs
+                        handleClick = {() => {
+                            if (searchTerm) {
+                                router.push(`/search/React Developer`)
+                            }
+                        }}
+                    />
                     
                 </View>
             </ScrollView>
